@@ -23,4 +23,4 @@ jobs:
           password: dckr_pat_JtRo3u2yjGIcuE8Fd_NNgq64vno
     
       - name: Push the Docker image
-        run: docker push pppopuchang/flask-app
+        run: docker push pppopuchang/flask-app:latest
