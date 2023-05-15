@@ -14,8 +14,11 @@ jobs:
 
     runs-on: ubuntu-latest
 
+
     steps:
-      run: echo "🍏 This job's status is ${{ job.status }}."
+
+    
+      - run: echo "🍏 This job's status is ${{ job.status }}."
       - name: Checkout code
       - uses: actions/checkout@v3
       - name: Build the Docker image
