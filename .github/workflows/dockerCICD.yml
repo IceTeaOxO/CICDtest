@@ -4,7 +4,7 @@ on:
   push:
     branches: main
   pull_request:
-    branches: main
+    branches: [ $default-branch ]
 
 jobs:
 
@@ -15,6 +15,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
+      run: echo "This job's status is ${{ job.status }}."
       # run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
       run: docker build -t flask-app:latest .
       run: echo "This job's status is ${{ job.status }}."
@@ -27,4 +28,4 @@ jobs:
         password: 1234567890
     
     - name: Push the Docker image
-      run: docker push my-image-name:$(date +%s)
+      run: docker push my-image-name:test
