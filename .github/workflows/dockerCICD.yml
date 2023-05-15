@@ -24,7 +24,7 @@ jobs:
       - name: image ID
         run: docker images
       - name: image tag
-        run: docker tag flask-app:v1 pppopuchang/flask-app:latest
+        run: docker tag flask-app:latest pppopuchang/flask-app:latest
       - name: Push the Docker image
         # docker tag 118a648f6ce9 pppopuchang/flask-app:latest
-        run: docker push pppopuchang/flask-app:v1
+        run: docker push pppopuchang/flask-app:latest
