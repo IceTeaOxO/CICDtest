@@ -9,21 +9,14 @@ on:
       - $default-branch
 
 jobs:
-
   build:
-
     runs-on: ubuntu-latest
-
-
     steps:
-
-
-    - run: echo "🍏 This job's status is ${{ job.status }}."
-    - name: Checkout code
-    - uses: actions/checkout@v3
-    - name: Build the Docker image
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Build the Docker image
       # run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
-    - run: docker build -t flask-app:latest .
+        run: docker build -t flask-app:latest .
     # CD
       # - name: Log in to Docker Hub
       #   uses: docker/login-action@v1
