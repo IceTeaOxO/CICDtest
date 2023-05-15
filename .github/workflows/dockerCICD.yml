@@ -21,8 +21,7 @@ jobs:
         with:
           username: pppopuchang
           password: dckr_pat_JtRo3u2yjGIcuE8Fd_NNgq64vno
-      - name: init docker
-        run: docker tag flask-app:latest flask-app:latest
+      
       - name: Push the Docker image
         
         run: docker push pppopuchang/flask-app:latest
