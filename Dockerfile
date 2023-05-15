@@ -1,5 +1,5 @@
 # 使用 Python 3.x 作為基礎映像檔
-FROM python:3.x
+FROM python:3.10
 
 # 設定工作目錄
 WORKDIR /app
